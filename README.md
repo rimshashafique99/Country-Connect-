@@ -1,4 +1,3 @@
-CountryConnect
 CountryConnect is a simple web application that allows users to search for any country and view its detailed information, including its flag, capital, population, region, and more. This project demonstrates the use of Node.js, Express.js, and EJS for building a server-side rendered application that interacts with a third-party API.
 
 Features
@@ -36,11 +35,10 @@ CSS3: For styling the application.
 Font Awesome: For icons used in the search bar.
 
 API Used
-This project utilizes the Countries API by Abhishek Jain to fetch country data.
+This project utilizes the [Countries API by Abhishek Jain](https://countries-api-abhishek.vercel.app/) to fetch country data.
 
 Setup and Installation
 To get this project up and running on your local machine, follow these steps:
-
 
 1. Install Dependencies
 Navigate to the project directory in your terminal and install the required Node.js packages:
@@ -80,7 +78,6 @@ Enter the name of a country (e.g., "United States", "Pakistan", "Turkey") into t
 
 Click the search icon or press Enter.
 
-The page will display the country's detailed information fetched from the API.
+The page will display the country's flag and detailed information fetched from the API.
 
 If the country is not found or an error occurs, an appropriate message will be displayed.
-
