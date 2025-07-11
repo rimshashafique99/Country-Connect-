@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f1793f318b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Country Connect</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <img src="images/logo.jpeg" alt="logo" />
+      <h2>CountryConnect</h2>
+    </div>
+
+    <div class="search">
+      <h1>Search For Any Country!</h1>
+      <h3>
+        <% if (countryName && countryName !== "") { %>
+          Showing Results For: **<%= countryName %>** 🌍
+        <% } else if (content === "Enter a country name to search." || content === "Please enter a country name.") { %>
+          <%= content %>
+        <% } else if (content && content.startsWith("{")) { %>
+          Results Found!
+        <% } else { %>
+          Enter a country name to search.
+        <% } %>
+      </h3>
+      <form action="/countryname" method="GET">
+        <div class="search-container">
+          <i class="fa-solid fa-earth-americas icon-left"></i>
+          <input type="text" placeholder="Search.." name="search" id="search" value="<%= typeof search !== 'undefined' ? search : '' %>"/>
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="data">
+      <pre><code><%= content %></code></pre>
+    </div>
+  </body>
+</html>
